@@ -167,7 +167,7 @@
         function shareText() {
             const url = "https://t.me/wadaxiwa_bot/mybots?startapp=1111";
             const text = 'hello 呀，欢迎来到这里～';
-            this.openTelegramLink(
+            Telegram.WebApp.openTelegramLink(
                 'https://t.me/share/url?' + new URLSearchParams({ url, text: text || '' }).toString(),
             );
         };
