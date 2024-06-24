@@ -165,8 +165,11 @@
         };
         // Function to call shareText API
         function shareText() {
-            const textToShare = "分享内容给任意好友: This is the text to share!";
-            console.log("Telegram.WebApp", Telegram.WebApp);
+            const url = "https://t.me/wadaxiwa_bot/mybots?startapp=1111";
+            const text = 'hello 呀，欢迎来到这里～';
+            this.openTelegramLink(
+                'https://t.me/share/url?' + new URLSearchParams({ url, text: text || '' }).toString(),
+            );
         };
         //function to call initData API
         function handelInit() {
