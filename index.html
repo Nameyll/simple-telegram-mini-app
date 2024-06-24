@@ -166,7 +166,7 @@
         // Function to call shareText API
         function shareText() {
             const textToShare = "分享内容给任意好友: This is the text to share!";
-            window.Telegram.WebApp.shareText(textToShare)
+            Telegram.WebApp.shareText(textToShare)
                 .then(() => {
                     console.log('Text shared successfully!');
                 })
