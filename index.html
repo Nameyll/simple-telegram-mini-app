@@ -106,6 +106,7 @@
         <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
         <button onclick="showPopup();">Launch Popup</button>
         <button onclick="handelInit();">Init Data</button>
+        <button onclick="shareText();">Share Text</button>
         <h1>Links</h1>
         <ul>
             <li>
@@ -161,6 +162,17 @@
                     Telegram.WebApp.openLink('https://ton.org/');
                 }
             });
+        };
+        // Function to call shareText API
+        function shareText() {
+            const textToShare = "分享内容给任意好友: This is the text to share!";
+            window.Telegram.WebApp.shareText(textToShare)
+                .then(() => {
+                    console.log('Text shared successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error sharing text:', error);
+                });
         };
         //function to call initData API
         function handelInit() {
