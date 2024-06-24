@@ -107,6 +107,7 @@
         <button onclick="showPopup();">Launch Popup</button>
         <button onclick="handelInit();">Init Data</button>
         <button onclick="shareText();">Share Text</button>
+        <button onclick="getParams();">Get params</button>
         <h1>Links</h1>
         <ul>
             <li>
@@ -171,6 +172,11 @@
                 'https://t.me/share/url?' + new URLSearchParams({ url, text: text || '' }).toString(),
             );
         };
+        //获取参数
+        function getParams() {
+            let startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
+            console.log("startParam", startParam);
+        }
         //function to call initData API
         function handelInit() {
             const initData = Telegram.WebApp.initData;
